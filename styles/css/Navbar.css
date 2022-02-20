@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap");
+nav {
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+nav img {
+  max-height: 100px;
+}
+
+nav ul {
+  margin: auto 2em 0em 2em;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1em .2em 0;
+}
+
+nav .admin-ul {
+  margin-left: auto;
+}
+
+nav .active {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=Navbar.css.map */

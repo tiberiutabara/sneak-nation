@@ -1,0 +1,24 @@
+.product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product {
+  margin: 1em;
+  max-width: 300px;
+  background-color: #d1d1d1;
+  display: inline-block;
+}
+
+.product img {
+  max-height: 300px;
+  margin-top: -2em;
+  padding: 1em;
+}
+/*# sourceMappingURL=HomeProductList.css.map */

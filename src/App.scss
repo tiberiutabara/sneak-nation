@@ -1,0 +1,56 @@
+// General styling
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f8f8f8;
+    scroll-behavior: smooth;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1400px;
+    min-height: 100vh;
+    background-color: white;
+}
+
+// Button
+
+.btn{
+    border: 3px solid black;
+    padding: 5px 10px;
+    color: black;
+    background: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover{
+        color: white;
+        background-color: black;
+        border-color: black;
+    }
+}
+
+// Links
+
+a{
+    color: inherit; 
+    text-decoration: inherit;
+}
+
+// Message (errors, loading, empty etc)
+
+.message{
+    text-align: center;
+    margin: 2em;
+    font-size: 22px;
+}

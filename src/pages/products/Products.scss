@@ -1,0 +1,15 @@
+.search{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin: 1em 2em;
+
+    input{
+        border: 3px solid black;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+}
