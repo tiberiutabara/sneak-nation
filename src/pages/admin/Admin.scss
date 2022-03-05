@@ -1,0 +1,32 @@
+.admin{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 1em;
+    align-items: center;
+
+    ul{
+        width: 500px;
+        list-style-type: none;
+    }
+
+    li{
+        margin: .5em;
+        border: 2px solid black;
+        padding: 4px;
+
+        span{
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: .5em;
+        }
+    }
+
+    ul button{
+        margin-left: .5em;
+        padding: 2px 8px;
+        font-size: 16px;
+        float: right;
+        border: none;
+    }
+}

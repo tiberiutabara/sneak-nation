@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=Admin.css.map */
+.admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1em;
+}
+
+.admin ul {
+  width: 500px;
+  list-style-type: none;
+}
+
+.admin li {
+  margin: .5em;
+  border: 2px solid black;
+  padding: 4px;
+}
+
+.admin li span {
+  font-size: 18px;
+  margin-right: .5em;
+}
+
+.admin ul button {
+  margin-left: .5em;
+  padding: 2px 8px;
+  font-size: 16px;
+  float: right;
+  border: none;
+}
+/*# sourceMappingURL=Admin.css.map */

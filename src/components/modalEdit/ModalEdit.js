@@ -71,13 +71,13 @@ export default function ModalEdit({ docId }) {
 
   return (
     <>
-      <button onClick={toggleModal}>Edit</button>
+      <button className='btn' onClick={toggleModal}>Edit</button>
 
       {modal && (
         <div className="modal">
           <div className="overlay" onClick={toggleModal}></div>
           <div className="modal-content">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='admin-form'>
               <label>
                 <span> New title: </span>
                 <input
@@ -139,10 +139,10 @@ export default function ModalEdit({ docId }) {
                 ></textarea>
               </label>
 
-              <button>Update</button>
+              <button className='btn'>Update</button>
             </form>
 
-            <button onClick={toggleModal}>Close</button>
+            <button className='btn close' onClick={toggleModal}>Close</button>
           </div>
         </div>
       )}

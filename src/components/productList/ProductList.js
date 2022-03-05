@@ -16,8 +16,7 @@ export default function ProductList({ products }) {
   }, [products])
 
   return (
-    <div className='product-list'>
-      <ul>
+      <ul  className='product-list'>
           {products.map(product => (
             <div key={product.id} className='product'>
               <Link to={product.id} >
@@ -30,6 +29,5 @@ export default function ProductList({ products }) {
 
           {error && <p>{error}</p>}
       </ul>
-    </div>
   )
 }

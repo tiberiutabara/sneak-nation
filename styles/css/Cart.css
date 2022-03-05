@@ -34,13 +34,17 @@
       -ms-flex-align: center;
           align-items: center;
   width: 650px;
-  margin-bottom: -2px;
   border: 2px solid black;
+  border-bottom: none;
   padding: 1em;
 }
 
 .cart li * {
   margin-right: 1em;
+}
+
+.cart li:last-child {
+  border-bottom: 2px solid black;
 }
 
 .cart img {

@@ -33,6 +33,8 @@ export default function AdminForm() {
     setFeatured(false);
     setColour("");
     setDescription("");
+
+    alert('Product added - Success!')
   };
 
   // getting boolean value
@@ -46,7 +48,7 @@ export default function AdminForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='admin-form'>
       <label>
         <span> Product title: </span>
         <input
@@ -100,7 +102,7 @@ export default function AdminForm() {
       </label>
 
       <label>
-        <span> Description: </span>
+        <p> Description: </p>
         <textarea
           required
           onChange={(e) => setDescription(e.target.value)}
@@ -108,7 +110,7 @@ export default function AdminForm() {
         ></textarea>
       </label>
 
-      <button>Add Product</button>
+      <button className='btn'>Add Product</button>
     </form>
   );
 }

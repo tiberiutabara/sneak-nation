@@ -52,8 +52,10 @@ export default function Cart() {
       )}
 
       <div className='checkout'>
-        {sum > 0 && <><p>Total</p> <p className='checkout-price'>{sum} $</p></>}
-        {sum == 0 && <p className='message'>No products added to the cart</p>}
+        <div className='cart-status'>
+          {sum > 0 && <><p>Total</p> <p className='checkout-price'>{sum} $</p></>}
+          {sum == 0 && <p className='message'>No products added to the cart</p>}
+        </div>
 
         <button className='btn' onClick={clearCart}>Clear Cart</button>
         <button className='btn' onClick={() => {navigate('../')}}>Checkout</button>

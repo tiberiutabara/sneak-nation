@@ -13,9 +13,10 @@ export default function AddButton({ product, id }) {
   
   const addToCart = () => {
     localStorage.setItem(product.title , JSON.stringify(values))
+    alert('Product added - Success!')
   }
 
   return (
-    <button onClick={addToCart}>Add to Cart</button>
+    <button className='btn' onClick={addToCart}>Add to Cart</button>
   )
 }

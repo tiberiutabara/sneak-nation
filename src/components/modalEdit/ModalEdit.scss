@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 50;
     position: fixed;
 }
 
@@ -14,15 +14,16 @@
 
 .modal-content {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
     background: #f1f1f1;
     padding: 14px 28px;
     border-radius: 3px;
-    max-width: 600px;
-    min-width: 300px;
+    width: 600px;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .close-modal {
@@ -30,4 +31,36 @@
     top: 10px;
     right: 10px;
     padding: 5px 7px;
+}
+
+.modal button{
+    border: 3px solid black !important;
+    padding: 5px 15px !important;
+}
+
+.modal .close{
+    margin-right: .8em;
+}
+
+@media (max-width: 680px){
+    .modal .admin-form{
+        max-width: 95%;
+        max-height: 500px;
+        margin: 1em auto;
+        padding: .5em;
+
+        label{
+            margin: 0;
+            font-size: 14px;
+
+            input, textarea, select{
+                font-size: 14px;
+            }
+
+            textarea{
+                margin-top: 0;
+                margin-left: .4em;
+            }
+        }
+    }
 }

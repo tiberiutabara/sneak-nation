@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 // styles
 import './Navbar.scss'
@@ -7,24 +8,36 @@ import './Navbar.scss'
 import Logo from '../../Media/Logo.png'
 
 export default function Navbar({ user, logout }) {
+  const [activeMenu, setActiveMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setActiveMenu(!activeMenu)
+  }
+
+  useEffect(() =>{
+    setActiveMenu(!activeMenu)
+  }, [])
+
   return (
-    <nav>
+    <nav className={activeMenu ? null : 'bg-overlay'}>
       <img src={Logo} />
 
-      <ul>
-        <li><NavLink activeclassname="active" to="/">Home</NavLink></li>
+      <button className='menu-button btn' onClick={toggleMenu}>{activeMenu ? 'MENU' : 'CLOSE'}</button>
 
-        <li><NavLink activeclassname="active" to="/products">Products</NavLink></li>
+      <ul className={activeMenu ? 'menu' : 'nav-overlay'}>
+        <li onClick={toggleMenu}><NavLink activeclassname="active" to="/">Home</NavLink></li>
 
-        <li><NavLink activeclassname="active" to="/cart">Cart</NavLink></li>
+        <li onClick={toggleMenu}><NavLink activeclassname="active" to="/products">Products</NavLink></li>
+
+        <li onClick={toggleMenu}><NavLink activeclassname="active" to="/cart">Cart</NavLink></li>
       </ul>
 
-      <ul className='admin-ul'>
-        {user && (<li><NavLink activeclassname="active" to="/admin">Admin</NavLink></li>)}
+      <ul className={activeMenu ? 'menu admin-ul' : 'admin-ul nav-overlay'}>
+        {user && (<li onClick={toggleMenu}><NavLink activeclassname="active" to="/admin">Admin</NavLink></li>)}
 
-        {!user && (<li><NavLink activeclassname="active" to="/login">Login</NavLink></li>)}
+        {!user && (<li onClick={toggleMenu}><NavLink activeclassname="active" to="/login">Login</NavLink></li>)}
 
-        {user && (<li onClick={logout} style={{ cursor: 'pointer' }}>Log out</li>)}
+        {user && (<li onClick={() => {logout(); toggleMenu()}} style={{ cursor: 'pointer' }}>Log out</li>)}
       </ul>
     </nav>
   )

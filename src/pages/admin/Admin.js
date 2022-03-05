@@ -24,17 +24,15 @@ export default function Admin() {
   }
 
   return (
-    <div>
-        <h2>Admin</h2>
-
+    <div className='admin'>
         <AdminForm />
 
         {pending && <p className='message'>{pending}</p>}
         <ul>
           {products && products.map(product => (
-            <li key={product.id}>{product.title} 
+            <li key={product.id}><span>{product.title} </span>
 
-            <button onClick={() => {
+            <button className='btn' onClick={() => {
               if (window.confirm("Delete the item?")) {
                 handleDelete(product.id)
               }}}> X</button>

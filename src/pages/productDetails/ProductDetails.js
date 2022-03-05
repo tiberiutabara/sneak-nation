@@ -34,17 +34,20 @@ export default function ProductDetails() {
   }, [id])
 
   return (
-    <div>
+    <div className='product-details'>
       {pending && <p className='message'>{pending}</p>}
       {error && <p className='message'>{error}</p>}
 
-      <p>{product.title}</p>
-      <p>{product.colour}</p>
-      <p>{product.price} </p>
       <img src={product['img-url']} alt={product.title} />
-      <p>{product.description}</p>
 
-      <AddButton product={product} id={id} />
+      <div className='product-details-info'>
+        <h1 className='product-details-title'>{product.title}</h1>
+        <p className='product-details-colour'>{product.colour}</p>
+        <p className='product-details-price'>{product.price} $</p>
+        <p className='product-details-description'>{product.description}</p>
+
+        <AddButton product={product} id={id} />
+      </div>
 
     </div>
   )
